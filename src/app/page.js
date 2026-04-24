@@ -12,7 +12,7 @@ export default function Home() {
     setError(null);
     setResult(null);
 
-    // Parse input text into array of strings (split by newline or comma)
+
     const data = inputText
       .split(/[\n,]+/)
       .map(item => item.trim())
@@ -59,7 +59,9 @@ export default function Home() {
 
       <div className="user-info">
         {result && (
-            <span>Credentials Confirmed: {result.user_id}</span>
+            <span>
+                Credentials Confirmed: {result.user_id} | {result.email_id} | {result.college_roll_number}
+            </span>
         )}
       </div>
 

@@ -55,7 +55,7 @@ export async function POST(request) {
 
         const [parent, child] = trimmed.split('->');
         
-        // Multi-parent case: discard subsequent parents
+
         if (seen_children.has(child)) {
             return; 
         }
@@ -109,7 +109,7 @@ export async function POST(request) {
     let total_trees = 0;
     let total_cycles = 0;
     
-    let largest_tree_root = null; // Spec says string, but what if no valid trees? We can omit or keep null/empty string. 
+    let largest_tree_root = null;
     let max_depth = -1;
 
     function buildTree(root, current_path) {
